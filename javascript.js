@@ -48,7 +48,8 @@ gameFlow = (function () {
     elements.forEach((_, index) => {
       elements[index].textContent = "";
       elements[index].style.backgroundColor = "#e2e2e2";
-
+    });
+  };
   const gameOver = () => {
     return gameboard.every((val) => val != "");
   };
@@ -98,7 +99,6 @@ cells.forEach((_, index) => {
 });
 
 const reset = document.querySelector(".reset-game");
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   gameFlow.reset(cells);
 });
-
